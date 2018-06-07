@@ -18,16 +18,11 @@ class Equipos
     private $id;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $jugadores;
-
-    /**
      * Constructor
      */
     public function __construct()
     {
-        $this->jugadores = new \Doctrine\Common\Collections\ArrayCollection();
+
     }
 
     /**
@@ -64,38 +59,5 @@ class Equipos
         return $this->id;
     }
 
-    /**
-     * Add jugadore
-     *
-     * @param \AppBundle\Entity\Jugadores $jugadore
-     *
-     * @return Equipos
-     */
-    public function addJugadore(\AppBundle\Entity\Jugadores $jugadore)
-    {
-        $this->jugadores[] = $jugadore;
-
-        return $this;
-    }
-
-    /**
-     * Remove jugadore
-     *
-     * @param \AppBundle\Entity\Jugadores $jugadore
-     */
-    public function removeJugadore(\AppBundle\Entity\Jugadores $jugadore)
-    {
-        $this->jugadores->removeElement($jugadore);
-    }
-
-    /**
-     * Get jugadores
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getJugadores()
-    {
-        return $this->jugadores;
-    }
 }
 

@@ -12,6 +12,5 @@
         <option name="fixed"/>
       </options>
     </field>
-    <one-to-many field="jugadores" target-entity="AppBundle\Entity\Jugadores" mapped-by="equipos" fetch="LAZY"/>
   </entity>
 </doctrine-mapping>

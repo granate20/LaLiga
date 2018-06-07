@@ -12,6 +12,5 @@
         <option name="fixed"/>
       </options>
     </field>
-    <one-to-many field="jugadores" target-entity="Jugadores" mapped-by="equipos" />
   </entity>
 </doctrine-mapping>

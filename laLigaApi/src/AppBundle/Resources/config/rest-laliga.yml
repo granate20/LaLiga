@@ -8,5 +8,4 @@ jugadores_getByClub:
 
 jugadores_New:
     path: /newPlayerToTeam/{id}
-    type: [POST]
     defaults: { _controller: "AppBundle:Jugadores:newPlayerToTeam" }
