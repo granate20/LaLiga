@@ -28,7 +28,7 @@ class JugadoresController extends Controller
                     
             $em = $this->getDoctrine()->getManager();
     
-            return $em->getRepository('AppBundle:Jugadores')->findByEquipos($equipo);
+            return $em->getRepository('AppBundle:Jugadores')->findByEquipos($equipo,["apellido"=>"asc"]);
         }
         catch(\Exception $ex)
         {
