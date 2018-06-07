@@ -16,11 +16,10 @@ class EquiposController extends Controller
      * Lists all equipo entities.
      *
      */
-    public function indexAction()
+    public function getAllAction()
     {
         $em = $this->getDoctrine()->getManager();
 
         return $em->getRepository('AppBundle:Equipos')->findBy([],["nombre"=>"asc"]);
-
     }
 }
