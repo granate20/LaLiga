@@ -15,9 +15,11 @@ class EquiposControllerTest extends WebTestCase
         // Go to the list view
         $crawler = $client->request('GET', '/getAllTeams');
         $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /equipos/");
-        
-    }
 
-    
+        $respuesta=json_decode($client->getResponse()->getContent());
+
+        $this->assertTrue(count($respuesta)>0,"Error al obtener equipos");
+
+    }    
 }
 

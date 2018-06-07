@@ -18,8 +18,15 @@ class EquiposController extends Controller
      */
     public function getAllAction()
     {
-        $em = $this->getDoctrine()->getManager();
-
-        return $em->getRepository('AppBundle:Equipos')->findBy([],["nombre"=>"asc"]);
+        try
+        {
+            $em = $this->getDoctrine()->getManager();
+    
+            return $em->getRepository('AppBundle:Equipos')->findBy([],["nombre"=>"asc"]);
+        }
+        catch(\Exception $ex)
+        {
+            throw $this->createNotFoundException('Error al mostrar equipos');
+        }
     }
 }
