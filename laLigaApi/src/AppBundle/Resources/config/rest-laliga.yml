@@ -1,0 +1,3 @@
+api_default:
+    path: /
+    defaults: { _controller: "AppBundle:Equipos:index" }

@@ -1,8 +1,5 @@
 app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
-    
-app_equipos:
-    resource: "@AppBundle/Resources/config/routing/equipos.yml"
-    prefix:   /equipos
+    prefix:   /
+    resource: "@AppBundle/Resources/config/rest-laliga.yml"
 
+    
