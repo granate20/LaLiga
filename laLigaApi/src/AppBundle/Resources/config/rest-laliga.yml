@@ -1,0 +1,11 @@
+equipos_getAll:
+    path: /getAllTeams
+    defaults: { _controller: "AppBundle:Equipos:getAll" }
+
+jugadores_getByClub:
+    path: /getPlayersByClub/{id}
+    defaults: { _controller: "AppBundle:Jugadores:getPlayersByTeam" }
+
+jugadores_New:
+    path: /newPlayerToTeam/{id}
+    defaults: { _controller: "AppBundle:Jugadores:newPlayerToTeam" }
